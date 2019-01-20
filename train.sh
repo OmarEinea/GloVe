@@ -2,7 +2,9 @@
 # Makes programs and trains a GloVe model.
 # Use as: train.sh CORPUS SAVE_FILE VECTOR_SIZE VOCAB_MIN_COUNT WINDOW_SIZE MAX_ITER NUM_THREADS
 set -e
+rm -r .git LICENSE README.md
 make
+rm -r src Makefile
 
 CORPUS=$1
 VOCAB_FILE=vocab.txt
